@@ -18,7 +18,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'http://localhost:4321',
-  base: '/',
+  site: 'https://demartisabella.github.io',
+  base: '/portfolio',
   integrations: [sitemap()],
 });
