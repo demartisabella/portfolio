@@ -1,0 +1,31 @@
+---
+import { getEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Timeline from "../../components/ui/Timeline.astro";
+import { PAGES } from "../../config";
+
+if (!PAGES.timeline.isActive) {
+    return Astro.redirect("/404");
+}
+
+const timelineEntry = await getEntry("timeline", "timeline");
+
+if (!timelineEntry) {
+    throw new Error("Timeline not found.");
+}
+
+const { items } = timelineEntry.data;
+---
+
+<BaseLayout title={PAGES.timeline.title}>
+    <header class="page-header">
+        <h1 class="page-title">{PAGES.timeline.title}</h1>
+        <p class="page-subtitle">
+            The evolution of my engineering journey
+        </p>
+    </header>
+
+    <div class="container-wide">
+        <Timeline items={items} />
+    </div>
+</BaseLayout>

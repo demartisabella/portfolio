@@ -1,0 +1,12 @@
+---
+import BaseListing from "../../layouts/BaseListing.astro";
+import { PAGES } from "../../config";
+
+if (PAGES.engineering.isActive === false) {
+    return Astro.redirect("/404");
+}
+
+const { title, subtitle } = PAGES.engineering;
+---
+
+<BaseListing collection="engineering" title={title} subtitle={subtitle} />

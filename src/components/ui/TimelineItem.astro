@@ -1,0 +1,87 @@
+---
+import TimelineImageCarousel from "./TimelineImageCarousel.astro";
+import type { TimelineItemData } from "./Timeline.astro";
+
+interface Props {
+    item: TimelineItemData;
+    isLast?: boolean;
+}
+
+const { item, isLast = false } = Astro.props;
+---
+
+<div class={`timeline-row ${isLast ? "last" : ""}`}>
+
+    <!-- LEFT PANEL -->
+
+    <div class="timeline-left">
+
+        <div class="timeline-period">
+            {item.period}
+        </div>
+
+        <h3 class="timeline-title">
+            {item.title}
+        </h3>
+
+        <p class="timeline-brief">
+            {item.brief}
+        </p>
+
+        <div class="timeline-popup">
+
+            <p class="timeline-description">
+                {item.description}
+            </p>
+
+            {
+                item.link && (
+                    <a
+                        href={item.link}
+                        class="timeline-link"
+                    >
+                        {item.linkText}
+                    </a>
+                )
+            }
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CENTER -->
+
+    <div class="timeline-center">
+
+        <div class="timeline-dot"></div>
+
+        {
+            !isLast && (
+                <div class="timeline-line"></div>
+            )
+        }
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+
+<!-- RIGHT -->
+
+<div class="timeline-right">
+
+    {
+        item.images && item.images.length > 0 && (
+            <TimelineImageCarousel
+                images={item.images}
+                alt={item.title}
+            />
+        )
+    }
+
+</div>
+
+</div>

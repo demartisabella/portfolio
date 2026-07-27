@@ -1,0 +1,14 @@
+---
+import BaseListing from "../../layouts/BaseListing.astro";
+import { PAGES } from "../../config";
+
+if (PAGES.honors.isActive === false) {
+    return Astro.redirect("/404");
+}
+---
+
+<BaseListing
+    title={PAGES.honors.title}
+    subtitle={PAGES.honors.subtitle}
+    collection="honors"
+/>

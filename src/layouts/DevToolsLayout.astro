@@ -1,13 +1,11 @@
 ---
 import { SITE, THEME_CONFIG, THEMES } from "../config";
 import { ClientRouter } from "astro:transitions";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/inter/800.css";
-import "@fontsource/jetbrains-mono/400.css";
-import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/source-sans-3/400.css";
+import "@fontsource/source-sans-3/600.css";
+import "@fontsource/source-sans-3/700.css";
+import "@fontsource/source-serif-4/400.css";
+import "@fontsource/source-serif-4/500.css";
 import "../styles/global.css";
 
 interface Props {
@@ -30,7 +28,7 @@ const themeDark = THEMES[themeDarkKey] || THEMES.dark_default;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href={SITE.favicon} />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/CleanLogo.svg" sizes="any" />
         <title>{title} | Dev Tools</title>
         <meta name="description" content={description || "Development internal tools."} />
         <meta name="robots" content="noindex, nofollow" />
@@ -41,14 +39,12 @@ const themeDark = THEMES[themeDarkKey] || THEMES.dark_default;
                 lightBg: themeLight.background,
                 lightFg: themeLight.foreground,
                 lightAccent: themeLight.accent,
-                lightMuted: themeLight.muted,
                 lightBorder: themeLight.border,
                 lightSurface: themeLight.surface,
 
                 darkBg: themeDark.background,
                 darkFg: themeDark.foreground,
                 darkAccent: themeDark.accent,
-                darkMuted: themeDark.muted,
                 darkBorder: themeDark.border,
                 darkSurface: themeDark.surface,
             }}
@@ -57,7 +53,6 @@ const themeDark = THEMES[themeDarkKey] || THEMES.dark_default;
                 --background: var(--lightBg);
                 --foreground: var(--lightFg);
                 --accent: var(--lightAccent);
-                --text-muted: var(--lightMuted);
                 --border: var(--lightBorder);
                 --surface: var(--lightSurface);
                 scrollbar-gutter: stable;
@@ -67,7 +62,6 @@ const themeDark = THEMES[themeDarkKey] || THEMES.dark_default;
                 --background: var(--darkBg);
                 --foreground: var(--darkFg);
                 --accent: var(--darkAccent);
-                --text-muted: var(--darkMuted);
                 --border: var(--darkBorder);
                 --surface: var(--darkSurface);
             }

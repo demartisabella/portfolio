@@ -20,7 +20,7 @@ export interface ExperienceItem extends CVItem {
   role: string;
 }
 
-export interface CV {
+export interface timeline {
   name: string;
   title: string;
   experience: ExperienceItem[];
@@ -33,30 +33,26 @@ export interface BasePage {
   tags: string[];
 }
 
-export interface Blog extends BasePage {
-  date: string;
-  author?: string;
-}
 
 export interface Project extends BasePage {
   date: string;
   external_url?: string;
 }
 
-export interface Publication extends BasePage {
+export interface research extends BasePage {
   date: string;
   author?: string;
   journal?: string;
   external_url?: string;
 }
 
-export interface Talk extends BasePage {
+export interface honors extends BasePage {
   date: string;
   event?: string;
   external_url?: string;
 }
 
-export interface Teaching extends BasePage {
+export interface engineering extends BasePage {
   institution?: string;
   external_url?: string;
 }

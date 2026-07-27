@@ -1,15 +1,12 @@
 ---
 import { SITE, THEME_CONFIG, ANALYTICS, THEMES } from "../config";
 import { ClientRouter } from "astro:transitions";
-import LeftSidebar from "../components/layout/LeftSidebar.astro";
 import RightMain from "../components/layout/RightMain.astro";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/inter/800.css";
-import "@fontsource/jetbrains-mono/400.css";
-import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/source-sans-3/400.css";
+import "@fontsource/source-sans-3/600.css";
+import "@fontsource/source-sans-3/700.css";
+import "@fontsource/source-serif-4/400.css";
+import "@fontsource/source-serif-4/500.css";
 import "katex/dist/katex.min.css";
 import "../styles/global.css";
 
@@ -53,7 +50,7 @@ const jsonLd = {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href={SITE.favicon} />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/CleanLogo.svg" sizes="any" />
         <meta name="generator" content={Astro.generator} />
 
         <!-- Robots / Indexing -->
@@ -65,14 +62,12 @@ const jsonLd = {
                 lightBg: themeLight.background,
                 lightFg: themeLight.foreground,
                 lightAccent: themeLight.accent,
-                lightMuted: themeLight.muted,
                 lightBorder: themeLight.border,
                 lightSurface: themeLight.surface,
 
                 darkBg: themeDark.background,
                 darkFg: themeDark.foreground,
                 darkAccent: themeDark.accent,
-                darkMuted: themeDark.muted,
                 darkBorder: themeDark.border,
                 darkSurface: themeDark.surface,
             }}
@@ -81,7 +76,6 @@ const jsonLd = {
                 --background: var(--lightBg);
                 --foreground: var(--lightFg);
                 --accent: var(--lightAccent);
-                --text-muted: var(--lightMuted);
                 --border: var(--lightBorder);
                 --surface: var(--lightSurface);
                 scrollbar-gutter: stable;
@@ -91,7 +85,6 @@ const jsonLd = {
                 --background: var(--darkBg);
                 --foreground: var(--darkFg);
                 --accent: var(--darkAccent);
-                --text-muted: var(--darkMuted);
                 --border: var(--darkBorder);
                 --surface: var(--darkSurface);
             }
@@ -219,7 +212,6 @@ const jsonLd = {
         class="bg-background text-foreground transition-colors duration-300 min-h-screen"
     >
         <div class="flex max-lg:flex-col mx-auto max-w-6xl w-full min-h-screen">
-            <LeftSidebar />
             <RightMain>
                 <slot />
             </RightMain>

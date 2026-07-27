@@ -1,44 +1,45 @@
+import type Timeline from "../components/ui/Timeline.astro";
 import type { PagesConfig } from "../types";
 
 export const PAGES: PagesConfig = {
     home: {
-        title: "About Me",
+        title: "Home",
         subtitle: "",
         isActive: true,
     },
     blog: {
         title: "Blog",
         subtitle: "Thoughts on physics, philosophy, and music.",
+        isActive: false,
+    },
+    research: {
+        title: "Research",
+        subtitle: "A collection of research papers.",
         isActive: true,
     },
-    publications: {
-        title: "Publications",
-        subtitle: "A collection of research papers and scientific articles.",
-        isActive: true,
-    },
-    talks: {
-        title: "Talks & Presentations",
-        subtitle: "Public lectures, colloquia, and conference presentations.",
+    honors: {
+        title: "Honors & Certifications",
+        subtitle: "Recognitions and technical certifications.",
         isActive: true,
     },
     projects: {
         title: "Code & Projects",
         subtitle: "Open source contributions and technological experiments.",
-        isActive: true,
+        isActive: false,
     },
-    teaching: {
-        title: "Teaching",
-        subtitle: "Academic courses and educational materials.",
-        isActive: true,
-    },
-    tags: {
-        title: "Tags",
-        subtitle: "Explore content by topic.",
+    engineering: {
+        title: "Engineering Projects",
+        subtitle: "Applied industrial engineering solutions in process optimization, layout design, and automation.",
         isActive: true,
     },
     cv: {
         title: "Curriculum Vitae",
-        subtitle: "Academic and professional history.",
+        subtitle: "Experience, skills, and education.",
+        isActive: true,
+    },
+    timeline: {
+        title: "Timeline",
+        subtitle: "Key milestones in my academic and professional journey.",
         isActive: true,
     },
 };

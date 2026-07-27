@@ -1,12 +1,12 @@
 import type { NavLink } from "../types";
 
 export const NAV_LINKS: NavLink[] = [
-    { href: "/", label: "About", isActive: true },
-    { href: "/publications", label: "Publications", isActive: true },
-    { href: "/talks", label: "Talks", isActive: true },
-    { href: "/teaching", label: "Teaching", isActive: true },
-    { href: "/projects", label: "Code", isActive: true },
-    { href: "/posts", label: "Blog", isActive: true },
-    { href: "/tags", label: "Tags", isActive: true },
+    { href: "/", label: "Home", isActive: true },
+    { href: "/timeline", label: "Timeline", isActive: true },
+    { href: "/research", label: "Research", isActive: true },
+    { href: "/engineering", label: "Engineering Projects", isActive: true },
+    { href: "/honors", label: "Honors & Certifications", isActive: true },
+    { href: "/projects", label: "Code", isActive: false },
+    { href: "/posts", label: "Blog", isActive: false },
     { href: "/cv", label: "CV", isActive: true },
 ];

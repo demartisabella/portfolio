@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import BaseDetail from "../../layouts/BaseDetail.astro";
+import { PAGES } from "../../config";
+
+if (PAGES.honors.isActive === false) {
+    return Astro.redirect("/404");
+}
+
+export async function getStaticPaths() {
+    if (PAGES.honors.isActive === false) return [];
+    const honors = await getCollection("honors");
+    return honors.map((honors: any) => ({
+        params: { id: honors.id },
+        props: { honors },
+    }));
+}
+
+const { id } = Astro.params;
+---
+
+<BaseDetail collection="honors" id={id} />

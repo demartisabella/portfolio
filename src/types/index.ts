@@ -3,13 +3,12 @@ export type {
     CVItem,
     EducationItem,
     ExperienceItem,
-    CV,
     BasePage,
-    Blog,
+    timeline,
     Project,
-    Publication,
-    Talk,
-    Teaching,
+    research,
+    engineering,
+    honors,
 } from "./content";
 
 export type { DisplayLink, DisplayMeta, ListingItem, DetailItem } from "./display";

@@ -1,0 +1,14 @@
+---
+import BaseListing from "../../layouts/BaseListing.astro";
+import { PAGES } from "../../config";
+
+if (PAGES.research.isActive === false) {
+    return Astro.redirect("/404");
+}
+---
+
+<BaseListing
+    collection="research"
+    title={PAGES.research.title}
+    subtitle={PAGES.research.subtitle}
+/>

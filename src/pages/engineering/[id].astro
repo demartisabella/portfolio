@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import BaseDetail from "../../layouts/BaseDetail.astro";
+
+export async function getStaticPaths() {
+    const engineering = await getCollection("engineering");
+    return engineering.map((entry) => ({
+        params: { id: entry.id },
+        props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+---
+
+<BaseDetail collection="engineering" id={entry.id} />

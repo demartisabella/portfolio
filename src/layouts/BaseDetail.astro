@@ -14,6 +14,7 @@ interface Props {
 
 const { collection, id } = Astro.props;
 const entry = (await getEntry(collection, id)) as any;
+const resources = entry.data.resources || [];
 
 if (!entry) return Astro.redirect("/404");
 
@@ -36,11 +37,35 @@ const ogImage = entry.data.image || SITE.ogImage;
 <BaseLayout title={detail.title} description={description} ogImage={ogImage} ogType="article">
     <div class="flex justify-between items-center mb-4">
         <BackLink href={detail.backHref} label={collection} />
-        {detail.externalUrl && (
-            <a href={detail.externalUrl} target="_blank" rel="noopener noreferrer" class="link">
-                View external
-            </a>
-        )}
+        <div class="flex gap-4 flex-wrap">
+
+            {
+                resources.length > 0 ? (
+                    resources.map((resource: any) => (
+                        <a
+                            href={resource.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link"
+                        >
+                            {resource.label}
+                        </a>
+                    ))
+                ) : (
+                    detail.externalUrl && (
+                        <a
+                            href={detail.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link"
+                        >
+                            View external →
+                        </a>
+                    )
+                )
+            }
+
+        </div>
     </div>
 
     <article>
