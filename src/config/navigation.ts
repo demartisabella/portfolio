@@ -1,5 +1,6 @@
 import type { NavLink } from "../types";
 
+
 export const NAV_LINKS: NavLink[] = [
     { href: "/", label: "Home", isActive: true },
     { href: "/timeline", label: "Timeline", isActive: true },

@@ -1,7 +1,7 @@
 import type { SiteConfig, ThemeConfig, SettingsConfig, UmamiAnalyticsConfig, AnalyticsConfig } from "../types";
 
 export const SITE: SiteConfig = {
-    website: "https://shannon.github.io/academic-portfolio-astro/",
+    website: "https://demartisabella.github.io/portfolio",
     author: "Isabella DeMarti",
     desc: "Personal portfolio and blog of Isabella DeMarti.",
     title: "Isabella DeMarti",

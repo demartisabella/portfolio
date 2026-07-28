@@ -7,6 +7,7 @@ interface Props {
 const { images, alt } = Astro.props;
 
 const carouselId = `carousel-${Math.random().toString(36).slice(2, 9)}`;
+const BASE = import.meta.env.BASE_URL;
 ---
 
 <div
@@ -17,7 +18,11 @@ const carouselId = `carousel-${Math.random().toString(36).slice(2, 9)}`;
     {
         images.map((image, index) => (
             <img
-                src={image}
+                 src={
+                    image.startsWith("/")
+                        ? `${BASE}${image.slice(1)}`
+                        : image
+                }
                 alt={alt}
                 class:list={[
                     "timeline-image",

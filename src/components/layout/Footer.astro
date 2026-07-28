@@ -8,6 +8,7 @@ const showDevTools = import.meta.env.DEV || SETTINGS.addDevToolsInProduction;
 const activeSocials = SOCIALS.filter((s) => s.isActive);
 const bioCollection = await getCollection("bio");
 const bio = bioCollection[0]?.data;
+const BASE = import.meta.env.BASE_URL;
 ---
 
 <footer class="footer">
@@ -54,7 +55,7 @@ const bio = bioCollection[0]?.data;
 
             {showDevTools && (
                 <a
-                    href="/dev-tools"
+                    href={`${BASE}dev-tools`}
                     aria-label="Developer Tools"
                     class="btn-icon"
                 >
