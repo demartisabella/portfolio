@@ -1,13 +1,13 @@
 import type { SiteConfig, ThemeConfig, SettingsConfig, UmamiAnalyticsConfig, AnalyticsConfig } from "../types";
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 export const SITE: SiteConfig = {
     website: "https://demartisabella.github.io/portfolio",
     author: "Isabella DeMarti",
     desc: "Personal portfolio and blog of Isabella DeMarti.",
     title: "Isabella DeMarti",
-    ogImage: "shannon.webp",
     postPerPage: 5,
-    favicon: "/CleanLogo.svg",
+    favicon: "`${BASE}/images/CleanLogo.svg",
     lang: "en",
 };
 

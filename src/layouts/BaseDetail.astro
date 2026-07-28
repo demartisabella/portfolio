@@ -15,6 +15,7 @@ interface Props {
 const { collection, id } = Astro.props;
 const entry = (await getEntry(collection, id)) as any;
 const resources = entry.data.resources || [];
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 if (!entry) return Astro.redirect("/404");
 
@@ -43,7 +44,11 @@ const ogImage = entry.data.image || SITE.ogImage;
                 resources.length > 0 ? (
                     resources.map((resource: any) => (
                         <a
-                            href={resource.url}
+                            href={
+                                resource.url.startsWith("/")
+                                    ? `${BASE}/${resource.url}`
+                                    : resource.url
+                            }
                             target="_blank"
                             rel="noopener noreferrer"
                             class="link"

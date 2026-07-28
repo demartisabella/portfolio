@@ -7,7 +7,7 @@ interface Props {
     isLast?: boolean;
 }
 
-const BASE = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 const { item, isLast = false } = Astro.props;
 ---
 
@@ -40,7 +40,7 @@ const { item, isLast = false } = Astro.props;
                     <a
                         href={
                             item.link.startsWith("/")
-                                ? `${BASE}${item.link.slice(1)}`
+                                ? `${BASE}/${item.link}`
                                 : item.link
                         }
                         class="timeline-link"

@@ -7,7 +7,7 @@ if (PAGES.cv.isActive === false) {
     return Astro.redirect("/404");
 }
 
-const BASE = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <BaseLayout title={PAGES.cv.title}>
@@ -24,7 +24,7 @@ const BASE = import.meta.env.BASE_URL;
         <div class="cv-container">
 
             <img
-                src={`${BASE}cv/Isabella_DeMarti_CV_Preview.jpg`}
+                src={`${BASE}/cv/Isabella_DeMarti_CV_Preview.jpg`}
                 alt="Curriculum Vitae Preview"
                 class="cv-preview"
             />
@@ -32,7 +32,7 @@ const BASE = import.meta.env.BASE_URL;
             <div class="cv-actions">
 
                 <a
-                    href={`${BASE}cv/Isabella_DeMarti_CV.pdf`}
+                    href={`${BASE}/cv/Isabella_DeMarti_CV.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="cv-button primary"
@@ -41,7 +41,7 @@ const BASE = import.meta.env.BASE_URL;
                 </a>
 
                 <a
-                    href={`${BASE}cv/Isabella_DeMarti_CV.pdf`}
+                    href={`${BASE}/cv/Isabella_DeMarti_CV.pdf`}
                     download
                     class="cv-button secondary"
                 >

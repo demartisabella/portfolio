@@ -3,7 +3,7 @@ import { getEntry, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { PAGES } from "../config";
 import { getCollection } from "astro:content";
-const BASE = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 // Load bio content
 const research = await getCollection("research");
@@ -47,13 +47,13 @@ const { Content: BioContent } = bioEntry
         <div class="hero-right">
 
         <img
-            src={`${BASE}images/LogoName.png`}
+            src={`${BASE}/images/LogoName.png`}
             alt="Logo"
             class="logo-light"
         />
 
         <img
-            src={`${BASE}images/LogoNameDark.png`}
+            src={`${BASE}/images/LogoNameDark.png`}
             alt="Logo"
             class="logo-dark"
         />
@@ -65,7 +65,7 @@ const { Content: BioContent } = bioEntry
 
     <div class="hero-stats">
 
-    <a href={`${BASE}engineering/montik`} class="stat-card">
+    <a href={`${BASE}/engineering/montik`} class="stat-card">
         <h2>1</h2>
         <p>
 			International Award
@@ -73,7 +73,7 @@ const { Content: BioContent } = bioEntry
 		</p>
     </a>
 
-    <a href={`${BASE}engineering`} class="stat-card">
+    <a href={`${BASE}/engineering`} class="stat-card">
         <h2>{engineering.length}</h2>
         <p>
 			Industry Projects
@@ -81,7 +81,7 @@ const { Content: BioContent } = bioEntry
 		</p>
     </a>
 
-    <a href={`${BASE}research`} class="stat-card">
+    <a href={`${BASE}/research`} class="stat-card">
         <h2>{research.length}</h2>
         <p>
 			Research Papers
