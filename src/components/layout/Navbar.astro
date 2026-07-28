@@ -6,36 +6,38 @@ const BASE = import.meta.env.BASE_URL;
 ---
 
 <nav class="navbar">
-    <ul class="nav-links">
-            {
-    NAV_LINKS.filter(...).map((link) => {
+        <ul class="nav-links">
+    {
+    NAV_LINKS.filter((link) => {
+        const isHome = link.href === "/";
+        const pageKey = isHome
+        ? "home"
+        : link.href.split("/").filter(Boolean)[0];
+        const pageConfig = PAGES[pageKey];
+
+        return link.isActive !== false && pageConfig?.isActive !== false;
+    }).map((link) => {
 
         const href =
-            link.href === "/"
-                ? BASE
-                : `${BASE}${link.href.slice(1)}`;
+        link.href === "/"
+            ? BASE
+            : `${BASE}${link.href}`;
 
         return (
-            <li>
-
-                <a
-                    href={href}
-                    class={`nav-link ${
-                        currentPath === href ||
-                        (link.href !== "/" &&
-                        currentPath.startsWith(href))
-                            ? "active"
-                            : "inactive"
-                    }`}
-                >
-
-                    {link.label}
-
-                    <span class="nav-link-line" />
-
-                </a>
-
-            </li>
+        <li>
+            <a
+            href={href}
+            class={`nav-link ${
+                currentPath === href ||
+                (link.href !== "/" && currentPath.startsWith(href))
+                ? "active"
+                : "inactive"
+            }`}
+            >
+            {link.label}
+            <span class="nav-link-line" />
+            </a>
+        </li>
         );
     })
     }
