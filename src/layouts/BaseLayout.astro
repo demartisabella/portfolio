@@ -104,14 +104,14 @@ const jsonLd = {
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={new URL(ogImage, Astro.url)} />
+        <meta property="og:image" content={new URL(ogImage, SITE.website).href} />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={Astro.url} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
+        <meta name="twitter:image" content={new URL(ogImage, SITE.website).href} />
 
         <!-- Structured Data (JSON-LD) -->
         <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -119,10 +119,10 @@ const jsonLd = {
         <ClientRouter />
 
         {
-            (ANALYTICS.umami.websiteId || ANALYTICS.ga4Id) && (
+            (ANALYTICS.umami?.websiteId || ANALYTICS.ga4Id) && (
                 <script is:inline define:vars={{
-                    umamiId: ANALYTICS.umami.websiteId,
-                    umamiSrc: ANALYTICS.umami.src,
+                    umamiId: ANALYTICS.umami?.websiteId ?? "",
+                    umamiSrc: ANALYTICS.umami?.src ?? "",
                     ga4Id: ANALYTICS.ga4Id
                 }}>
                     let analyticsLoaded = false;

@@ -7,6 +7,7 @@ export interface DisplayMeta {
 export interface DisplayLink {
     href: string;
     label: string;
+    external?: boolean;
 }
 
 export interface ListingItem {

@@ -4,10 +4,11 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 export const SITE: SiteConfig = {
     website: "https://demartisabella.github.io/portfolio",
     author: "Isabella DeMarti",
-    desc: "Personal portfolio and blog of Isabella DeMarti.",
+    desc: "Industrial Engineering student specializing in Lean Six Sigma, Industry 4.0, Power Platform automation, and operational excellence research.",
     title: "Isabella DeMarti",
     postPerPage: 5,
-    favicon: "`${BASE}/images/CleanLogo.svg",
+    favicon: "/portfolio/images/CleanLogo.svg",
+    ogImage: "/portfolio/images/DeMartIsaOP.jpg",
     lang: "en",
 };
 
