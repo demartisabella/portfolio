@@ -39,8 +39,17 @@ const jsonLd = {
     "@type": "Person",
     name: SITE.author,
     url: SITE.website,
-    jobTitle: "Professor",
+    image: new URL(SITE.ogImage, SITE.website).toString(),
+    jobTitle: "Industrial Engineer",
     description: SITE.desc,
+    affiliation: {
+        "@type": "University",
+        name: "Tecnológico de Costa Rica"
+    },
+    sameAs: [
+        "https://www.linkedin.com/in/your-linkedin/",
+        "https://github.com/demartisabella"
+    ]
 };
 ---
 
