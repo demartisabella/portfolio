@@ -21,7 +21,7 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
         const href =
         link.href === "/"
             ? BASE
-            : `${BASE}/${link.href}`;
+            : `${BASE}${link.href}`;
 
         return (
         <li>

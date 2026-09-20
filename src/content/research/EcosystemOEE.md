@@ -1,11 +1,11 @@
 ---
-title: "Digital Ecosystem for Reliable OEE Measurement through Statistical Validation"
+title: "Digital Data-Capture Ecosystem for Traceable OEE Analysis in a Flexible Manufacturing Cell"
 
 author: "Isabella DeMarti et al."
 
 date: "July 2026"
 
-journal: "IEEE IESTEC 2026 (Submitted)"
+journal: "IEEE IESTEC 2026 (Accepted)"
 
 resources:
 - label: "View Paper"
@@ -51,4 +51,4 @@ Rather than focusing solely on automation, this work demonstrates that successfu
 
 ---
 
-*Submitted to the IEEE International Engineering, Sciences and Technology Conference (IESTEC 2026).*
+*Accepted into the IEEE International Engineering, Sciences and Technology Conference (IESTEC 2026).*

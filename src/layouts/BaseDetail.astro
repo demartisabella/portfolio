@@ -35,7 +35,7 @@ const description = entry.data.description || detail.description || SITE.desc;
 const ogImage = entry.data.image || SITE.ogImage;
 ---
 
-<BaseLayout title={detail.title} description={description} ogImage={ogImage} ogType="article">
+<BaseLayout title={detail.title} description={description} ogImage={ogImage} ogType="website">
     <div class="flex justify-between items-center mb-4">
         <BackLink href={detail.backHref} label={collection} />
         <div class="flex gap-4 flex-wrap">
