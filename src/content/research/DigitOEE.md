@@ -5,13 +5,13 @@ author: "Isabella DeMarti et al."
 
 date: "June 2026"
 
-journal: "Revista Ventana (Submitted)"
+journal: "Revista Ventana (Accepted)"
 
 resources:
 - label: "View Paper"
   url: "/papers/digitalizacion-oee.pdf"
 
-description: "Designed a Microsoft Power Platform ecosystem that transformed manual OEE reporting into an automated, real-time analytics workflow."
+description: "Designed a Microsoft Power Platform ecosystem that transformed manual OEE reporting into an automated, per-shift analytics workflow."
 
 tags:
   - Industry 4.0
@@ -22,7 +22,7 @@ tags:
 ---
 ## Research Overview
 
-Once operational procedures had been standardized, the next challenge was eliminating manual data handling. This research presents the design and implementation of a Microsoft Power Platform ecosystem that digitizes production data collection, automates OEE calculations, and delivers real-time manufacturing analytics.
+Once operational procedures had been standardized, the next challenge was eliminating manual data handling. This research presents the design and implementation of a Microsoft Power Platform ecosystem that digitizes production data collection, automates OEE calculations, and delivers per-shift manufacturing analytics.
 
 ## Problem
 
@@ -54,4 +54,4 @@ The project demonstrates that low-code technologies can provide practical Indust
 
 ---
 
-*Submitted to Revista Ventana (2026).*
+*Accepted to Revista Ventana (2026).*

@@ -5,7 +5,7 @@ issuer: "Tecnológico de Costa Rica - Scholarships and Social Management Departm
 resources:
   - label: "View I Semester 2026"
     url: "/honors/I2026honor.jpg"
-  - label: "View II Smester 2025"
+  - label: "View II Semester 2025"
     url: "/honors/II2025honor.jpg"
 description: "100% tuition exemption awarded for outstanding academic performance."
 tags:
@@ -30,7 +30,7 @@ The Academic Honor Scholarship (Beca de Honor) is awarded by TEC's Scholarships 
 ## Details
 
 - **Issuer:** TEC Scholarships and Social Management Department
-- **Period:** I Semester 2026 and II Semester 2025
+- **Period:** I and II Semester 2026 and II Semester 2025
 - **Benefit:** 100% tuition exemption
 - **Criteria:** Outstanding academic performance
 - **Cumulative GPA:** 88.89/100
